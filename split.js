@@ -14,7 +14,7 @@ const parse_svg = require("svg-path-parser");
     const x_width = 6.75383 * Number(size);
     const y_width = 6.75383 * Number(size);
     const x_delta = 0.26;
-    const y_delta = 0.36;
+    const y_delta = 0.26;
     glyphs.forEach(path => {
         if (!path.getAttribute) {
             return [];
@@ -23,7 +23,10 @@ const parse_svg = require("svg-path-parser");
             if (c.code === 'M') {
                 const x_index = Math.floor((c.x - x_delta) / x_width);
                 const y_index = Math.floor((c.y - y_delta) / y_width);
-                const box_id = `xxx_${x_index}_yyy_${y_index}`;
+                const box_id = `？${[
+                    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+                    "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ", "AK", "AL", "AM", "AN", "AO", "AP", "AQ", "AR", "AS", "AT", "AU", "AV", "AW", "AX", "AY", "AZ",
+                ][x_index]}${y_index}`;
                 const box = dom.window.document.getElementById(box_id) ?? (() => {
                     const new_g = dom.window.document.createElementNS("http://www.w3.org/2000/svg", "g");
                     const randomColor = "#" + ("000000" + (Math.random() * 0xFFFFFF | 0).toString(16)).slice(-6);
