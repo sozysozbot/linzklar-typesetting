@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="350mm" height="246.4mm" version="1.1" viewBox="0 0 250 176" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" stroke="#000" stroke-width=".365">
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyphs">
         <path d="m190.86 93.37h11.305" />
         <path d="m190.84 84.898h5.39" />
         <path d="m196.75 84.898h5.39" />
