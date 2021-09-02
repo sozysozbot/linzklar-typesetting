@@ -13,7 +13,7 @@ const parse_svg = require("svg-path-parser");
     const glyphs = [...dom.window.document.getElementById("glyphs").childNodes];
     const x_width = 6.75383 * Number(size);
     const y_width = 6.75383 * Number(size);
-    const x_delta = 0.26;
+    const x_delta = 0.28;
     const y_delta = 0.26;
     glyphs.forEach(path => {
         if (!path.getAttribute) {

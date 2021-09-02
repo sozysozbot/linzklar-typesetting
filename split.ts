@@ -14,7 +14,7 @@ import * as parse_svg from 'svg-path-parser';
 
     const x_width = 6.75383 * Number(size);
     const y_width = 6.75383 * Number(size);
-    const x_delta = 0.26;
+    const x_delta = 0.28;
     const y_delta = 0.26;
 
     glyphs.forEach(path => {
