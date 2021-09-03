@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <!-- From 再D15:E16 -->
-    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <path fill="#faa" d="m-4 -4 h8v8h-8" />
+    <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
     <g fill="none" stroke="#000" stroke-width=".365" >
-        <path d="M0.9342550000000003 1.2762749999999983l1.23105 2.34975" />
-		<path d="M6.030755000000001 0.6362749999999977s-1.3788 4.1329-3.2254 5.473" />
+        <path d="M-2.4427-2.1006l1.2311 2.3497" />
+		<path d="M2.6538-2.7406s-1.3788 4.1329-3.2254 5.473" />
     </g>
 </svg>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <!-- From 筆X20 -->
-    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <path fill="#faa" d="m-4 -4 h8v8h-8" />
+    <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
     <g fill="none" stroke="#000" stroke-width=".365" >
-        <path d="M4.171909999999997 4.533400000000029l1.8046 0.83567v-3.7907h-5.3563" />
-		<path d="M0.6319100000000049 5.373400000000032v-4.2096" />
-		<path d="M3.341910000000013 0.28340000000002874v6.368" />
+        <path d="M0.795 1.1565l1.8046 0.8357v-3.7907h-5.3563" />
+		<path d="M-2.745 1.9965v-4.2096" />
+		<path d="M-0.035-3.0935v6.368" />
     </g>
 </svg>

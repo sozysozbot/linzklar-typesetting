@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <!-- From 皇E20 -->
-    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <path fill="#faa" d="m-4 -4 h8v8h-8" />
+    <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
     <g fill="none" stroke="#000" stroke-width=".365" >
-        <path d="M5.71368 1.4634000000000356v4.1114" />
-		<path d="M1.2466800000000013 1.4634000000000356v4.1114" />
-		<path d="M5.71368 1.4634000000000356h-4.4673" />
-		<path d="M5.71368 5.003400000000028h-4.4673" />
-		<path d="M0.2676799999999986 3.2534000000000276h6.3844" />
-		<path d="M3.46068 0.19340000000002533v6.6546" />
+        <path d="M2.3368-1.9135v4.1114" />
+		<path d="M-2.1302-1.9135v4.1114" />
+		<path d="M2.3368-1.9135h-4.4673" />
+		<path d="M2.3368 1.6265h-4.4673" />
+		<path d="M-3.1092-0.1235h6.3844" />
+		<path d="M0.0838-3.1835v6.6546" />
     </g>
 </svg>

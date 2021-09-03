@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <!-- From 筆Y12:Z13 -->
-    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <path fill="#faa" d="m-4 -4 h8v8h-8" />
+    <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
     <g fill="none" stroke="#000" stroke-width=".365" >
-        <path d="M0.5990400000000022 5.279020000000003v-4.2095" />
-		<path d="M4.1590400000000045 4.4435199999999995l1.81505 0.83565v-3.79055h-5.3875" />
-		<path d="M3.3240400000000108 0.1920199999999994v6.368" />
+        <path d="M-2.7779 1.9021v-4.2095" />
+		<path d="M0.7821 1.0666l1.8151 0.8357v-3.7906h-5.3875" />
+		<path d="M-0.0529-3.1849v6.368" />
     </g>
 </svg>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <!-- From 八K7 -->
-    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <path fill="#faa" d="m-4 -4 h8v8h-8" />
+    <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
     <g fill="none" stroke="#000" stroke-width=".365" >
-        <path d="M5.239700000000013 0.1271900000000059v6.4222" />
-		<path d="M6.750700000000009 3.055190000000003h-6.4222" />
-		<path d="M3.4447000000000116 0.9401900000000012v4.3716" />
-		<path d="M1.6147000000000133 0.9401900000000012v4.3716" />
+        <path d="M1.8628-3.2497v6.4222" />
+		<path d="M3.3738-0.3217h-6.4222" />
+		<path d="M0.0678-2.4367v4.3716" />
+		<path d="M-1.7622-2.4367v4.3716" />
     </g>
 </svg>

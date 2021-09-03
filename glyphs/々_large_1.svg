@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <!-- From 々S18:T19 -->
-    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <path fill="#faa" d="m-4 -4 h8v8h-8" />
+    <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
     <g fill="none" stroke="#000" stroke-width=".365" >
-        <path d="M1.925530000000002 1.3055299999999974l2.68945 1.63095s-2.2757-0.159915-2.5712 0.6111c-0.471925 1.37555 1.2767 1.89745 2.56465 2.206" />
+        <path d="M-1.4514-2.0714l2.6895 1.631s-2.2757-0.1599-2.5712 0.6111c-0.4719 1.3756 1.2767 1.8975 2.5646 2.206" />
     </g>
 </svg>

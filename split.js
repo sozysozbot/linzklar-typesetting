@@ -32,25 +32,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
             if (!path.getAttribute) {
                 return [];
             }
-            if (size === 1) {
-                const old_path = path.getAttributeNS(null, "d");
-                const new_path = svgpath(old_path)
-                    .translate(-(x_index * x_width + x_delta), -(y_index * y_width + y_delta))
-                    .toString();
-                return [new_path];
-            }
-            else {
-                const new_path = svgpath(path.getAttributeNS(null, "d"))
-                    .translate(-(x_index * x_width + x_delta), -(y_index * y_width + y_delta))
-                    .scale(0.5)
-                    .toString();
-                return [new_path];
-            }
+            const new_path = svgpath(path.getAttributeNS(null, "d"))
+                .translate(-(x_index * x_width + x_delta), -(y_index * y_width + y_delta))
+                .scale(1 / size)
+                .translate(-x_width / 2, -y_width / 2) // so that the glyph's center lies at (0,0)
+                .round(4)
+                .toString();
+            return [new_path];
         });
         fs.writeFileSync(`${out_path}/${glyph_transcription}_${size === 2 ? "large" : "small"}_${transcription_count.get(glyph_transcription)}.svg`, `<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <!-- From ${glyph_id} -->
-    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <path fill="#faa" d="m-4 -4 h8v8h-8" />
+    <path fill="#aff" d="m${-x_width / 2} ${-y_width / 2} h${x_width} v${y_width} h${-x_width}" />
     <g fill="none" stroke="#000" stroke-width=".365" >
         ${new_paths.map(p => `<path d="${p}" />`).join("\n\t\t")}
     </g>
