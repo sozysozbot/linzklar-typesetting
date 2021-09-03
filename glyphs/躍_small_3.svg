@@ -3,7 +3,7 @@
     <!-- From 躍R5 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(-.16 .19)">
         <path d="M-0.722-3.3291l1.2217 0.7054" />
 		<path d="M2.628-3.1861s-2.1234 1.9086-5.283 3.3591" />
 		<path d="M-1.812-2.6731l4.4775 2.6905" />

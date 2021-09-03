@@ -3,7 +3,7 @@
     <!-- From 色C23 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(0 -.19)">
         <path d="M-0.2246-2.975s-0.7777 1.9608-2.6251 3.0818" />
 		<path d="M1.9294-2.235s-1.8094 4.5565-4.7882 5.4362" />
 		<path d="M-1.5686-0.335l4.6725 3.6494" />

@@ -3,7 +3,7 @@
     <!-- From 来E24 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(0 -.19)">
         <path d="M0.6948-0.5388l0.9614 0.6291v-2.8539h-2.8538" />
 		<path d="M-1.1912 0.0912v-3.1693" />
 		<path d="M-0.9762-0.2188s-0.0409 0.9529-0.0409 1.8195c0 1.4604-1.8313 1.6638-1.8313 1.6638" />

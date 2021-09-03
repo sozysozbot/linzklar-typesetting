@@ -3,8 +3,8 @@
     <!-- From 撃G20 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
-        <path d="M-1.9499-1.4235v2.653h4.1549" />
+    <g fill="none" stroke="#000" stroke-width=".365"  transform="translate(0 -.17)">
+        <path d="M-1.9499-1.4235v2.653h4.1549"/>
 		<path d="M2.1961-1.4235v3.325" />
 		<path d="M0.1071-2.2235s-0.0367 2.4471-0.0367 3.7114c0 0.9003-1.346 1.583-2.4461 1.583" />
 		<path d="M-3.1589-2.6535h6.3112" />

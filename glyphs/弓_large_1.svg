@@ -3,7 +3,7 @@
     <!-- From 弓W1:X2 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(-.12 .1)">
         <path d="M-2.064-2.5988h4.2692" />
 		<path d="M2.206-2.5988l-0.9579 4.999" />
 		<path d="M-2.369-0.1418h4.8728" />

@@ -3,7 +3,7 @@
     <!-- From 机AI5:AJ6 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(0 .19)">
         <path d="M-2.747-2.4655h4.8677" />
 		<path d="M-1.297-2.462s0.2979 4.3354-1.64 5.026" />
 		<path d="M0.398-2.4855v3.7295s-0.0923 1.1669 0.6496 1.1669c0.7147 0 1.8274-0.0118 1.8273-0.0118l-0.5622-1.9095" />

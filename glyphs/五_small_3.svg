@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
-    <!-- From 五S20 -->
-    <path fill="#faa" d="m-4 -4 h8v8h-8" />
-    <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
-        <path d="M3.0241 0.1165h-6.0213" />
-    </g>
-</svg>

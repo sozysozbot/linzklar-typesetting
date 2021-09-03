@@ -3,7 +3,7 @@
     <!-- From 人AF3:AG4 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(0 .19)">
         <path d="M-2.7213-1.6412h5.231" />
 		<path d="M-0.2213-1.2152l3.1621 3.8025" />
 		<path d="M0.0187-3.1222s0.0797 4.3335-2.7938 5.8405" />
