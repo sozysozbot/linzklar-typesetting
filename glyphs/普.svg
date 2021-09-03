@@ -3,7 +3,7 @@
     <!-- From 普AD5 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(0.27 0.09)">
         <path d="M-1.428-2.6371s-0.7678 1.4623-1.657 1.7766" />
 		<path d="M-1.428-1.0501s-0.7678 1.4623-1.657 1.7766" />
 		<path d="M-0.868-0.2321s-0.6826 1.9265-2.4741 3.0495" />
