@@ -2,17 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const parse_svg = require("svg-path-parser");
 (() => {
-    const file_name = process.argv[2] ?? "incomplete-small.svg";
-    const out_path = process.argv[3] ?? "incomplete-small-res.svg";
-    const size = process.argv[4] ?? "1";
+    const file_name = process.argv[2] ?? "incomplete-big.svg";
+    const out_path = process.argv[3] ?? "incomplete-big-res.svg";
     const fs = require('fs');
     const text = fs.readFileSync(file_name, 'utf-8');
     const jsdom = require("jsdom");
     const { JSDOM } = jsdom;
     const dom = new JSDOM(text);
     const glyphs = [...dom.window.document.getElementById("glyphs").childNodes];
-    const x_width = 6.75383 * Number(size);
-    const y_width = 6.75383 * Number(size);
+    const x_width = 6.75383;
+    const y_width = 6.75383;
     const x_delta = 0.28;
     const y_delta = 0.26;
     glyphs.forEach(path => {
