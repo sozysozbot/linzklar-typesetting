@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="350mm" height="246.4mm" version="1.1" viewBox="0 0 250 176" xmlns="http://www.w3.org/2000/svg">
+<svg width="350mm" height="246.4mm" version="1.1" viewBox="130 0 250 176" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" stroke="#000" stroke-width=".365" id="glyphs">
         <g id="官AI1:AJ2" stroke="#ff0000">
             <path d="m234.68 7.297 2.6473 2.6639" />
@@ -359,18 +359,15 @@
         </g>
 
         <g id="車U1:V2" stroke="lightpink">
-            <!-- must bake -->
-            <g transform="translate(-26.631)">
-                <g transform="matrix(1 0 0 1.0956 .18899 -1.8256)">
-                    <path d="m172.82 11.783v7.3142" />
-                    <path d="m164.73 11.783v7.3142" />
-                    <path d="m172.82 11.783h-8.0867" />
-                    <path d="m172.82 18.08h-8.0867" />
-                    <path d="m168.74 11.814v6.2725" />
-                </g>
-                <path d="m175.42 14.528h-12.906" />
-            </g>
             <path d="m136.63 11.973v-3.7418h11.41v3.7418" />
+
+            <path d="M146.378 11.0839v8.0134" />
+            <path d="M138.288 11.0839v8.0134" />
+            <path d="M146.378 11.0839h-8.0867" />
+            <path d="M146.378 17.9828h-8.0867" />
+            <path d="M142.298 11.1178v6.8722" />
+
+            <path d="m148.789 14.528h-12.906" />
         </g>
         <g id="六V3" stroke="#e79043">
             <path d="m145.69 20.513v6.4222" />
