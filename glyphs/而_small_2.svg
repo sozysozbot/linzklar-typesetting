@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+    <!-- From 而M6 -->
+    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <g fill="none" stroke="#000" stroke-width=".365" >
+        <path d="M6.40504 2.504020000000004l-5.8162 1.5584" />
+		<path d="M3.8310400000000016 0.05802000000000618v6.4222" />
+		<path d="M3.8310400000000016 6.480020000000003l-1.9686-1.1366" />
+    </g>
+</svg>

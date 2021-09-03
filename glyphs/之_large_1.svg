@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+    <!-- From 之I16:J17 -->
+    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <g fill="none" stroke="#000" stroke-width=".365" >
+        <path d="M3.2961799999999997 2.2943599999999975s-0.284695 0.94985-1.61685 1.78985" />
+		<path d="M3.2386799999999987 2.454360000000001l1.7117 1.4091" />
+    </g>
+</svg>

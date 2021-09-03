@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20mm" height="20mm" version="1.1" viewBox="0 0 6.75383 6.75383" xmlns="http://www.w3.org/2000/svg">
+    <!-- From 人AF3:AG4 -->
+    <path fill="#faa" d="m0 0 h20v20h-20" />
+    <g fill="none" stroke="#000" stroke-width=".365" >
+        <path d="M0.6556350000000037 1.7357549999999993h5.231" />
+		<path d="M3.1556350000000037 2.1617549999999994l3.16205 3.80245" />
+		<path d="M3.3956349999999986 0.2547549999999994s0.07972 4.3335-2.7938 5.8405" />
+    </g>
+</svg>
