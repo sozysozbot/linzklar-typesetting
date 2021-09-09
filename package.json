@@ -4,6 +4,7 @@
   "description": "燐字の等幅組版（等倍サイズ・二倍サイズ対応）",
   "main": "split.js",
   "dependencies": {
+    "@types/excel-column-name": "^1.0.0",
     "@types/jsdom": "^16.2.13",
     "@types/svg-path-parser": "^1.1.2",
     "excel-column-name": "^1.0.1",
@@ -11,9 +12,21 @@
     "svg-path-parser": "^1.1.0",
     "svgpath": "^2.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.2.2",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "start": "webpack-dev-server --mode production --stats-children"
   },
   "repository": {
     "type": "git",
