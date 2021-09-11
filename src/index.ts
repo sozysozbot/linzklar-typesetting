@@ -88,7 +88,25 @@ const typeset = (chars: PositionedChar[], relative_column_spacing: number, inter
     }
 
     const char_svgs = chars.map(c => {
-        const strokes = glyphs[c.char];
+        const strokes = glyphs[c.char] ?? [
+            /* invalid glyph */
+            "M-2.4-3.2v6.4",
+            "M-1.6-3.2v6.4",
+            "M-0.8-3.2v6.4",
+            "M 0.0-3.2v6.4",
+            "M 0.8-3.2v6.4",
+            "M 1.6-3.2v6.4",
+            "M 2.4-3.2v6.4",
+
+            "M-3.2-2.4h6.4",
+            "M-3.2-1.6h6.4",
+            "M-3.2-0.8h6.4",
+            "M-3.2 0.0h6.4",
+            "M-3.2 0.8h6.4",
+            "M-3.2 1.6h6.4",
+            "M-3.2 2.4h6.4",
+        ];
+
         const is_small = c.x_until - c.x_from === 1 && c.y_until - c.y_from === 1;
 
         const excel = is_small ?
@@ -119,7 +137,7 @@ const io = () => {
     const column_spacing_percentage = (document.getElementById("column_spacing_percentage")! as HTMLInputElement).value;
     const interpret_as_horizontal = (document.getElementById("horizontal")! as HTMLInputElement).checked;
     const chars = interpret_cells(raw_input.split("\n").map(row => row.split("\t")));
-    const {svg, x_max, y_max, x_min, y_min} = typeset(chars,
+    const { svg, x_max, y_max, x_min, y_min } = typeset(chars,
         Number(column_spacing_percentage) / 100,
         interpret_as_horizontal
     );
