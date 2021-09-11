@@ -3,7 +3,7 @@
     <!-- From 片M9 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-2.7019-2.2804h5.5999" />
 		<path d="M0.0981-2.2174v4.4458" />
 		<path d="M-2.2219-0.7994v3.0514h4.6738" />

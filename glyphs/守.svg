@@ -3,7 +3,7 @@
     <!-- From 守K10 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(-.18 -.02)">
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph" transform="translate(-.18 -.02)">
         <path d="M-0.2472-2.5572v4.0783" />
 		<path d="M-2.6522-2.5572v4.0783" />
 		<path d="M-0.2472-2.5572h-2.4051" />

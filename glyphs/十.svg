@@ -3,7 +3,7 @@
     <!-- From 十AF7:AG8 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-2.6613-2.7063l3.5062-0.0082s-3.3895 2.8384-3.3894 4.0377c0 1.6815 1.909 1.2935 5.281 1.2936" />
 		<path d="M2.7337 2.6167l-0.7678-2.8989" />
     </g>

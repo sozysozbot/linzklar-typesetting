@@ -3,7 +3,7 @@
     <!-- From 獣O15:P16 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-1.9862-1.8206h4.8617" />
 		<path d="M-0.5437-1.8006s0.1417 1.8927-1.2048 3.9701" />
 		<path d="M-1.8987-2.6556s-0.185 1.8943-1.2884 3.9735" />

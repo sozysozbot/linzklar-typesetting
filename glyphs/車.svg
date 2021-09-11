@@ -3,7 +3,7 @@
     <!-- From 車T21 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(.2 .19)">
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph" transform="translate(.2 .19)">
         <path d="M-3.0497-0.6873v-1.8708h5.6978v1.8708" />
 		<path d="M1.8233-1.1355v4.0066" />
 		<path d="M-2.2168-1.1355v4.0066" />

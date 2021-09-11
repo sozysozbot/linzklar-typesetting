@@ -3,7 +3,7 @@
     <!-- From 縦P3 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-0.7792-2.9942l1.3114 1.3296" />
 		<path d="M-2.6964-1.6212h5.6004" />
 		<path d="M2.9456-0.4104h-5.6002" />

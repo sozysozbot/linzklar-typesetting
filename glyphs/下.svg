@@ -3,7 +3,7 @@
     <!-- From 下D20 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(-.1 -.17)">
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph" transform="translate(-.1 -.17)">
         <path d="M2.9126-2.3735h-5.5999" />
 		<path d="M0.1126 3.0565v-5.4837" />
     </g>

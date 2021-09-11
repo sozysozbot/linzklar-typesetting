@@ -3,7 +3,7 @@
     <!-- From 戦AI7:AJ8 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-2.757-2.5803s0.0663 1.6502-0.5467 2.367" />
 		<path d="M-2.862-1.4308h2.695" />
 		<path d="M-1.387-3.0268s0.0497 4.3335-1.7418 5.8405" />

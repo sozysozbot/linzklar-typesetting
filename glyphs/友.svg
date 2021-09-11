@@ -3,7 +3,7 @@
     <!-- From 友K18:L19 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-3.1876-1.1314h1.9795" />
 		<path d="M-2.1011-2.5614s0.0365 3.8763-1.2793 5.224" />
 		<path d="M-2.2181-0.6614l1.0136 1.798" />

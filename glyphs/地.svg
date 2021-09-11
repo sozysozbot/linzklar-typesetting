@@ -3,7 +3,7 @@
     <!-- From 地W12:X13 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-2.039-1.6684h4.2279" />
 		<path d="M-0.509-1.7244s-0.4882 3.3028-1.771 4.5856" />
 		<path d="M-1.029-3.3169s-0.256 0.7941-1.0118 1.6484" />

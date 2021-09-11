@@ -3,7 +3,7 @@
     <!-- From 定AI3:AJ4 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" transform="translate(0 .08)">
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph" transform="translate(0 .08)">
         <path d="M-2.342-1.7857v2.571h3.1565" />
 		<path d="M0.808-1.7857v2.9567" />
 		<path d="M-0.777-2.8972s-0.0279 2.1601-0.0279 3.9244c0 1.2564-1.0226 1.8386-1.8584 1.8387" />

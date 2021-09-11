@@ -3,7 +3,7 @@
     <!-- From 巫M1:N2 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-2.5264-2.035v2.691" />
 		<path d="M2.5041-2.035h-5.03" />
 		<path d="M2.5041-2.035v2.691" />

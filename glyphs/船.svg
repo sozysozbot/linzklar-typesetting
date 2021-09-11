@@ -3,7 +3,7 @@
     <!-- From 船AA1:AB2 -->
     <path fill="#faa" d="m-4 -4 h8v8h-8" />
     <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-    <g fill="none" stroke="#000" stroke-width=".365" >
+    <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
         <path d="M-1.6567-2.6576v3.0474h3.5655" />
 		<path d="M1.8983-2.6576v3.5046" />
 		<path d="M-1.0967 0.5717s-0.6378 1.486-1.6688 1.9892" />
