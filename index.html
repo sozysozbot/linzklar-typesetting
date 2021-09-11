@@ -17,9 +17,8 @@
         min="0">%<br>
     <input type="radio" name="direction" id="vertical" checked="checked"><label for="vertical">縦書き</label><br>
     <input type="radio" name="direction" id="horizontal"><label for="horizontal">横書き</label><br>
-    <button id="convert" style="font-size: 200%;">組版！</button>
+    <button id="convert" style="font-size: 200%;">組版！</button><br>
+    <textarea readonly id="raw_output" rows="15" style="width: 100%"></textarea><br>
+    <svg id="svg_output" xmlns="http://www.w3.org/2000/svg"></svg>
     <script src="index.js"></script>
-    <textarea readonly id="raw_output"></textarea><br>
-    <svg id="svg_output" 
-        xmlns="http://www.w3.org/2000/svg"></svg>
 </body>
