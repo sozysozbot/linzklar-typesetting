@@ -113,17 +113,17 @@ const typeset = (chars: PositionedChar[], relative_column_spacing: number, inter
             `${excelColumnName.intToExcelCol(c.x_from + 1)}${c.y_from + 1}` :
             `${excelColumnName.intToExcelCol(c.x_from + 1)}${c.y_from + 1}:${excelColumnName.intToExcelCol(c.x_until)}${c.y_until}`
 
-        return `<g id="${c.char}${excel}">\n${strokes.map(stroke => `<path d=` + `"${svgpath(stroke)
+        return `        <g id="${c.char}${excel}">\n${strokes.map(stroke => `            <path d=` + `"${svgpath(stroke)
             .scale(is_small ? 1 : 2)
             .translate(width * (c.x_from + c.x_until) / 2, height * (c.y_from + c.y_until) / 2)
             .round(4)
             .toString()}" />\n`
-        ).join("\n\t\t")}</g>`
+        ).join("")}        </g>`
     });
 
     return {
-        svg: `<g fill="none" stroke="#000" stroke-width=".265" id="glyphs">
-    ${char_svgs.join("\n")}
+        svg: `    <g fill="none" stroke="#000" stroke-width=".265" id="glyphs">
+${char_svgs.join("\n")}
     </g>`,
         x_max: max_x_until * width,
         y_max: max_y_until * height,
@@ -143,9 +143,9 @@ const io = () => {
     );
 
     (document.getElementById("raw_output")! as HTMLTextAreaElement).value = `<?xml version="1.0" encoding="UTF-8"?>
-    <svg width="${x_max - x_min}mm" height="${y_max - y_min}mm" version="1.1" viewBox="${x_min} ${y_min} ${x_max - x_min} ${y_max - y_min}" xmlns="http://www.w3.org/2000/svg">
-    ${svg}
-    </svg>`;
+<svg width="${x_max - x_min}mm" height="${y_max - y_min}mm" version="1.1" viewBox="${x_min} ${y_min} ${x_max - x_min} ${y_max - y_min}" xmlns="http://www.w3.org/2000/svg">
+${svg}
+</svg>`;
     document.getElementById("svg_output")!.innerHTML = svg;
     document.getElementById("svg_output")!.setAttributeNS(null, "width", `${x_max - x_min}mm`);
     document.getElementById("svg_output")!.setAttributeNS(null, "height", `${y_max - y_min}mm`);
