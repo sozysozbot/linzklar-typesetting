@@ -118,7 +118,7 @@ const typeset = (chars: PositionedChar[], relative_column_spacing: number, inter
             .translate(width * (c.x_from + c.x_until) / 2, height * (c.y_from + c.y_until) / 2)
             .round(4)
             .toString()}" />\n`
-        )}</g>`
+        ).join("\n\t\t")}</g>`
     });
 
     return {
