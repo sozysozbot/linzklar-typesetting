@@ -9,12 +9,17 @@
     <h2>燐字の等幅組版（等倍サイズ・二倍サイズ対応）</h2>
     <p style="max-width: 1000px;">「<a
             href="https://docs.google.com/spreadsheets/d/1qCfHtiwAMKii9iUKhR3gpdRInjzW5ZHY8z7mAz9VeIw/">官定机戦小律・組版</a>」みたいなのをGoogle
-        Spreadsheetsで組んで、それを下のテキストボックスに貼り付けて「組版！」ボタンを押しましょう。罫線文字を入力するのが面倒な方は、左上と右下はかぎかっこ、左下はLで代用してもらっても構いません。どのパスがどこのどの文字なのかというアノテーションが全て付いた、人間に優しい人道的なSVGが出力されます。</p>
+        Spreadsheetsで組んで、それを下のテキストボックスに貼り付けて「組版！」ボタンを押しましょう。罫線文字を入力するのが面倒な方は、左上と右下はかぎかっこ、左下はLで代用してもらっても構いません。どのパスがどこのどの文字なのかというアノテーションが全て付いた、人間に優しい人道的なSVGが出力されます。
+    </p>
     <textarea id="raw_input" rows="25"
         style="width: 100%; white-space: pre; overflow-x: scroll; overflow-y: scroll;"></textarea>
-    <label for="column_spacing">行間：</label><input id="column_spacing_percentage" type="number" placeholder="0" min="0">%<br>
+    <label for="column_spacing">行間：</label><input id="column_spacing_percentage" type="number" placeholder="0"
+        min="0">%<br>
     <input type="radio" name="direction" id="vertical" checked="checked"><label for="vertical">縦書き</label><br>
-    <input type="radio" name="direction" id="horizontal" ><label for="horizontal">横書き</label><br>
-    <button id="convert" style="font-size: 200%;" onclick="io()">組版！</button>
+    <input type="radio" name="direction" id="horizontal"><label for="horizontal">横書き</label><br>
+    <button id="convert" style="font-size: 200%;">組版！</button>
     <script src="index.js"></script>
+    <textarea readonly id="raw_output"></textarea><br>
+    <svg id="svg_output" width="350mm" height="246.4mm" version="1.1" viewbox="0 0 250 176"
+        xmlns="http://www.w3.org/2000/svg"></svg>
 </body>

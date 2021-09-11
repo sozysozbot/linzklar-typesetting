@@ -35,5 +35,5 @@ var jsdom = require("jsdom");
         console.log(new_paths);
         glyph_map[charname] = new_paths;
     });
-    fs.writeFileSync("src/glyphs.ts", "const glyphs = " + JSON.stringify(glyph_map, null, 4));
+    fs.writeFileSync("src/glyphs.ts", "const glyphs: { [key:string] : string[] } = " + JSON.stringify(glyph_map, null, 4));
 })();
