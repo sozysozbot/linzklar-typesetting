@@ -66,6 +66,8 @@ const typeset = (chars: PositionedChar[], relative_column_spacing: number, inter
     const orig_size = 6.75383;
     const width = interpret_as_horizontal ? orig_size : orig_size * (1 + relative_column_spacing);
     const height = !interpret_as_horizontal ? orig_size : orig_size * (1 + relative_column_spacing);
+    const max_y_until = Math.max(...chars.map(c => c.y_until));
+    const max_x_until = Math.max(...chars.map(c => c.x_until));
 
     if (interpret_as_horizontal) {
         // 横書き
@@ -101,9 +103,15 @@ const typeset = (chars: PositionedChar[], relative_column_spacing: number, inter
         )}</g>`
     });
 
-    return `<g fill="none" stroke="#000" stroke-width=".265" id="glyphs">
+    return {
+        svg: `<g fill="none" stroke="#000" stroke-width=".265" id="glyphs">
     ${char_svgs.join("\n")}
-    </g>`
+    </g>`,
+        x_max: max_x_until * width,
+        y_max: max_y_until * height,
+        x_min: -width / 2,
+        y_min: -height / 2
+    }
 }
 
 const io = () => {
@@ -111,16 +119,19 @@ const io = () => {
     const column_spacing_percentage = (document.getElementById("column_spacing_percentage")! as HTMLInputElement).value;
     const interpret_as_horizontal = (document.getElementById("horizontal")! as HTMLInputElement).checked;
     const chars = interpret_cells(raw_input.split("\n").map(row => row.split("\t")));
-    const resulting_inner_svg = typeset(chars,
+    const {svg, x_max, y_max, x_min, y_min} = typeset(chars,
         Number(column_spacing_percentage) / 100,
         interpret_as_horizontal
     );
 
     (document.getElementById("raw_output")! as HTMLTextAreaElement).value = `<?xml version="1.0" encoding="UTF-8"?>
-    <svg width="350mm" height="246.4mm" version="1.1" viewBox="0 0 250 176" xmlns="http://www.w3.org/2000/svg">
-    ${resulting_inner_svg}
+    <svg width="${x_max - x_min}mm" height="${y_max - y_min}mm" version="1.1" viewBox="${x_min} ${y_min} ${x_max - x_min} ${y_max - y_min}" xmlns="http://www.w3.org/2000/svg">
+    ${svg}
     </svg>`;
-    document.getElementById("svg_output")!.innerHTML = resulting_inner_svg;
+    document.getElementById("svg_output")!.innerHTML = svg;
+    document.getElementById("svg_output")!.setAttributeNS(null, "width", `${x_max - x_min}mm`);
+    document.getElementById("svg_output")!.setAttributeNS(null, "height", `${y_max - y_min}mm`);
+    document.getElementById("svg_output")!.setAttributeNS(null, "viewBox", `${x_min} ${y_min} ${x_max - x_min} ${y_max - y_min}`);
 }
 
 document.getElementById('convert')!.onclick = io;
