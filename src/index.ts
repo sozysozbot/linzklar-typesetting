@@ -1,6 +1,6 @@
 import svgpath from 'svgpath';
 import * as excelColumnName from 'excel-column-name';
-import { glyphs } from './glyphs';
+import { sans_serif_glyphs } from './sans_serif';
 
 // 文字は [x_from, x_until) × [y_from, y_until) を埋める。
 // 半開区間なので、 x_until - x_from が文字のサイズを表す。
@@ -88,7 +88,7 @@ const typeset = (chars: PositionedChar[], relative_column_spacing: number, inter
     }
 
     const char_svgs = chars.map(c => {
-        const strokes = glyphs[c.char] ?? [
+        const strokes = sans_serif_glyphs[c.char] ?? [
             /* invalid glyph */
             "M-2.4-3.2v6.4",
             "M-1.6-3.2v6.4",

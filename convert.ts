@@ -5,11 +5,11 @@ import * as jsdom from 'jsdom';
 (() => {
     const { JSDOM } = jsdom;
     const glyph_map: object = {};
-    const filenames = fs.readdirSync("glyphs");
+    const filenames = fs.readdirSync("sans_serif");
     filenames.forEach((filename, index) => {
         const charname = filename.slice(0, 1);
         console.log(charname);
-        const content = fs.readFileSync(`glyphs/${filename}`, 'utf-8');
+        const content = fs.readFileSync(`sans_serif/${filename}`, 'utf-8');
         const dom = new JSDOM(content);
         const glyph = dom.window.document.getElementById("glyph");
 
@@ -39,5 +39,5 @@ import * as jsdom from 'jsdom';
         glyph_map[charname] = new_paths;
 
     });
-    fs.writeFileSync("src/glyphs.ts", `export const glyphs: { [key:string] : string[] } = ${JSON.stringify(glyph_map, null, 4)}`);
+    fs.writeFileSync("src/sans_serif.ts", `export const sans_serif_glyphs: { [key:string] : string[] } = ${JSON.stringify(glyph_map, null, 4)}`);
 })();

@@ -1,4 +1,7 @@
-export const glyphs: { [key:string] : string[] } = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sans_serif_glyphs = void 0;
+exports.sans_serif_glyphs = {
     "々": [
         "M-1.4514-2.0714l2.6895 1.631s-2.2757-0.1599-2.5712 0.6111c-0.4719 1.3756 1.2767 1.8975 2.5646 2.206"
     ],
@@ -531,4 +534,4 @@ export const glyphs: { [key:string] : string[] } = {
         "M-0.3626-0.5658s0.1417 1.4394-1.2048 3.0193",
         "M1.1724-0.5683s0.1417 1.5948-1.2048 3.3451"
     ]
-}
+};

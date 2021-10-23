@@ -3,4 +3,4 @@
 
 ## convert
 
-`glyphs/` に svg を書き、それを `tsc convert.ts` して `node convert.js` すると `src/glyphs.ts` にパスが焼かれ、それが webpack されてサイトに反映される。 
+`sans_serif/` に svg を書き、それを `tsc convert.ts` して `node convert.js` すると `src/glyphs.ts` にパスが焼かれる。`src/glyphs.ts` は `src/index.ts` とともに webpack の対象であるので、 webpack されてサイトに反映される。 
