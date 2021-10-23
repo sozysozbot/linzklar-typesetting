@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
+    <g transform="matrix(1 -0.17632698070846498 0 1 0 0)">
+        <path fill="#faa" d="m-4 -4 h8v8h-8" />
+        <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
+        <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
+            <path d="M2.4158-2.992s-1.8449 1.8738-5.0045 3.3243" />
+            <path d="M-1.7542-2.512l4.4775 2.6905" />
+            <path d="M2.1958-0.492s-2.019 2.7268-5.0045 3.6028" />
+            <path d="M-1.3042 0.528l4.4775 2.6905" />
+        </g>
+    </g>
+</svg>

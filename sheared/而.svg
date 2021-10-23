@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
+    <g transform="matrix(1 -0.17632698070846498 0 1 0 0)">
+        <path fill="#faa" d="m-4 -4 h8v8h-8" />
+        <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
+        <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
+            <path d="M2.9418-0.8729l-5.8162 1.5584" />
+            <path d="M0.3618-3.3189v6.4222" />
+            <path d="M0.3618 3.1031l-1.9686-1.1366" />
+        </g>
+    </g>
+</svg>

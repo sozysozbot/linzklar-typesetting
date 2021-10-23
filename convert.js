@@ -33,6 +33,7 @@ var jsdom = require("jsdom");
             return [new_path];
         });
         console.log(new_paths);
+        fs.writeFileSync("sheared/" + charname + ".svg", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg width=\"32mm\" height=\"32mm\" version=\"1.1\" viewBox=\"-4 -4 8 8\" xmlns=\"http://www.w3.org/2000/svg\">\n    <g transform=\"matrix(1 " + Math.tan(-10 * Math.PI / 180) + " 0 1 0 0)\">\n        <path fill=\"#faa\" d=\"m-4 -4 h8v8h-8\" />\n        <path fill=\"#aff\" d=\"m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383\" />\n        <g fill=\"none\" stroke=\"#000\" stroke-width=\".365\" id=\"glyph\">\n" + new_paths.map(function (d) { return "            <path d=\"" + d + "\" />"; }).join("\n") + "\n        </g>\n    </g>\n</svg>");
         glyph_map[charname] = new_paths;
     });
     fs.writeFileSync("src/sans_serif.ts", "export const sans_serif_glyphs: { [key:string] : string[] } = " + JSON.stringify(glyph_map, null, 4));

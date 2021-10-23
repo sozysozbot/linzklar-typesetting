@@ -34,7 +34,18 @@ import * as jsdom from 'jsdom';
             return [new_path];
         });
 
-        console.log(new_paths)
+        console.log(new_paths);
+
+        fs.writeFileSync(`sheared/${charname}.svg`, `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
+    <g transform="matrix(1 ${Math.tan(-10 * Math.PI / 180)} 0 1 0 0)">
+        <path fill="#faa" d="m-4 -4 h8v8h-8" />
+        <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
+        <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
+${new_paths.map(d => `            <path d="${d}" />`).join("\n")}
+        </g>
+    </g>
+</svg>`);
 
         glyph_map[charname] = new_paths;
 
