@@ -3,6 +3,7 @@ exports.__esModule = true;
 var fs = require("fs");
 var svgpath = require("svgpath");
 var jsdom = require("jsdom");
+var svg_path_parser_1 = require("svg-path-parser");
 (function () {
     var JSDOM = jsdom.JSDOM;
     var glyph_map = {};
@@ -33,7 +34,23 @@ var jsdom = require("jsdom");
             return [new_path];
         });
         console.log(new_paths);
-        fs.writeFileSync("sheared/" + charname + ".svg", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg width=\"32mm\" height=\"32mm\" version=\"1.1\" viewBox=\"-4 -4 8 8\" xmlns=\"http://www.w3.org/2000/svg\">\n    <g transform=\"matrix(1 " + Math.tan(-10 * Math.PI / 180) + " 0 1 0 0)\">\n        <path fill=\"#faa\" d=\"m-4 -4 h8v8h-8\" />\n        <path fill=\"#aff\" d=\"m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383\" />\n        <g fill=\"none\" stroke=\"#000\" stroke-width=\".365\" id=\"glyph\">\n" + new_paths.map(function (d) { return "            <path d=\"" + d + "\" />"; }).join("\n") + "\n        </g>\n    </g>\n</svg>");
+        // generate slab serif
+        var SLAB_LENGTH = 0.4;
+        var SHEAR_ANGLE = -10 * Math.PI / 180;
+        fs.writeFileSync("sheared/" + charname + ".svg", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg width=\"32mm\" height=\"32mm\" version=\"1.1\" viewBox=\"-4 -4 8 8\" xmlns=\"http://www.w3.org/2000/svg\">\n    <g transform=\"matrix(1 " + Math.tan(SHEAR_ANGLE) + " 0 1 0 0)\">\n        <path fill=\"#faa\" d=\"m-4 -4 h8v8h-8\" />\n        <path fill=\"#aff\" d=\"m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383\" />\n        <g fill=\"none\" stroke=\"#000\" stroke-width=\".07\" id=\"glyph\">\n" + new_paths.map(function (d) { return "            <path d=\"" + d + "\" />"; }).join("\n") + "\n        </g>\n    </g>\n    <g stroke=\"#ff7f27\" stroke-width=\".07\" id=\"slabs\">\n" + new_paths.flatMap(function (d) {
+            var commands = svg_path_parser_1.parseSVG(d);
+            svg_path_parser_1.makeAbsolute(commands);
+            // REASON: `makeAbsolute` modifies the Command[] in-place;
+            // this method generates `.x0`, `.y0`, `.x` and `.y` for all the commands.
+            // Hence I will cast with `as any as`
+            var commands_absolute = commands;
+            // If we store both x0 and y0, then that will be redundant.
+            // Also, the first 'moveto' command has `x0:0, y0:0`.
+            // Hence we only need to store .x and .y
+            return commands_absolute.flatMap(function (c) { return [
+                "        <path d=\"m " + (c.x).toPrecision(4) + " " + (Math.tan(SHEAR_ANGLE) * c.x + c.y).toPrecision(4) + " " + SLAB_LENGTH / 2 + " " + SLAB_LENGTH / 2 + " " + -SLAB_LENGTH + " " + -SLAB_LENGTH + " z\" />"
+            ]; });
+        }).join("\n") + "\n    </g>\n</svg>");
         glyph_map[charname] = new_paths;
     });
     fs.writeFileSync("src/sans_serif.ts", "export const sans_serif_glyphs: { [key:string] : string[] } = " + JSON.stringify(glyph_map, null, 4));

@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as svgpath from 'svgpath';
 import * as jsdom from 'jsdom';
+import { Command, makeAbsolute, parseSVG } from 'svg-path-parser';
 
 (() => {
     const { JSDOM } = jsdom;
@@ -36,14 +37,34 @@ import * as jsdom from 'jsdom';
 
         console.log(new_paths);
 
-        fs.writeFileSync(`sheared/${charname}.svg`, `<?xml version="1.0" encoding="UTF-8"?>
+        // generate slab serif
+        const SLAB_LENGTH = 0.4;
+        const SHEAR_ANGLE = -10 *  Math.PI / 180;
+        fs.writeFileSync(`sheared_slab_serif/${charname}.svg`, `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
-    <g transform="matrix(1 ${Math.tan(-10 * Math.PI / 180)} 0 1 0 0)">
+    <g transform="matrix(1 ${Math.tan(SHEAR_ANGLE)} 0 1 0 0)">
         <path fill="#faa" d="m-4 -4 h8v8h-8" />
         <path fill="#aff" d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383" />
-        <g fill="none" stroke="#000" stroke-width=".365" id="glyph">
+        <g fill="none" stroke="#000" stroke-width=".07" id="glyph">
 ${new_paths.map(d => `            <path d="${d}" />`).join("\n")}
         </g>
+    </g>
+    <g stroke="#ff7f27" stroke-width=".07" id="slabs">
+${new_paths.flatMap(d => {
+            const commands: Command[] = parseSVG(d);
+            makeAbsolute(commands);
+            // REASON: `makeAbsolute` modifies the Command[] in-place;
+            // this method generates `.x0`, `.y0`, `.x` and `.y` for all the commands.
+            // Hence I will cast with `as any as`
+            const commands_absolute = commands as any as { x0: number, y0: number, x: number, y: number }[]
+
+            // If we store both x0 and y0, then that will be redundant.
+            // Also, the first 'moveto' command has `x0:0, y0:0`.
+            // Hence we only need to store .x and .y
+            return commands_absolute.flatMap(c => [
+                `        <path d="m ${(c.x).toPrecision(4)} ${(Math.tan(SHEAR_ANGLE) * c.x + c.y).toPrecision(4)} ${SLAB_LENGTH / 2} ${SLAB_LENGTH / 2} ${-SLAB_LENGTH} ${-SLAB_LENGTH} z" />`
+            ]);
+        }).join("\n")}
     </g>
 </svg>`);
 
