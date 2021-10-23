@@ -11,4 +11,6 @@
 これをやると、以下のことが起きる。
 
 1. パスが埋め込まれたファイルである `src/sans_serif.ts` が生成される（`src/glyphs.ts` は `src/index.ts` とともに webpack の対象であるので、 webpack されてサイトに反映される）。 
-2. 10度の剪断変形が掛かり、`#ff7f27` 色のオレンジ斜線がついたスラブセリフが `sheared_slab_serif` に出力される
+2. 10度の剪断変形が掛かり、`#ff7f27` 色のオレンジ斜線がついたスラブセリフが `sheared_slab_serif_draft` に出力される
+
+ここで出力された `sheared_slab_serif_draft` は下書きであって、人のぬくもりを元に手動訂正が必要である。訂正後のものが `sheared_slab_serif` に置かれるはずである。がんばれ。

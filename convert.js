@@ -37,7 +37,7 @@ var svg_path_parser_1 = require("svg-path-parser");
         // generate slab serif
         var SLAB_LENGTH = 0.4;
         var SHEAR_ANGLE = -10 * Math.PI / 180;
-        fs.writeFileSync("sheared_slab_serif/" + charname + ".svg", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg width=\"32mm\" height=\"32mm\" version=\"1.1\" viewBox=\"-4 -4 8 8\" xmlns=\"http://www.w3.org/2000/svg\">\n    <g transform=\"matrix(1 " + Math.tan(SHEAR_ANGLE) + " 0 1 0 0)\">\n        <path fill=\"#faa\" d=\"m-4 -4 h8v8h-8\" />\n        <path fill=\"#aff\" d=\"m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383\" />\n        <g fill=\"none\" stroke=\"#000\" stroke-width=\".07\" id=\"glyph\">\n" + new_paths.map(function (d) { return "            <path d=\"" + d + "\" />"; }).join("\n") + "\n        </g>\n    </g>\n    <g stroke=\"#ff7f27\" stroke-width=\".07\" id=\"slabs\">\n" + new_paths.flatMap(function (d) {
+        fs.writeFileSync("sheared_slab_serif_draft/" + charname + ".svg", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg width=\"32mm\" height=\"32mm\" version=\"1.1\" viewBox=\"-4 -4 8 8\" xmlns=\"http://www.w3.org/2000/svg\">\n    <g transform=\"matrix(1 " + Math.tan(SHEAR_ANGLE) + " 0 1 0 0)\">\n        <path fill=\"#faa\" d=\"m-4 -4 h8v8h-8\" />\n        <path fill=\"#aff\" d=\"m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383\" />\n        <g fill=\"none\" stroke=\"#000\" stroke-width=\".07\" id=\"glyph\">\n" + new_paths.map(function (d) { return "            <path d=\"" + d + "\" />"; }).join("\n") + "\n        </g>\n    </g>\n    <g stroke=\"#ff7f27\" stroke-width=\".07\" id=\"slabs\">\n" + new_paths.flatMap(function (d) {
             var commands = svg_path_parser_1.parseSVG(d);
             svg_path_parser_1.makeAbsolute(commands);
             // REASON: `makeAbsolute` modifies the Command[] in-place;
@@ -61,8 +61,8 @@ var svg_path_parser_1 = require("svg-path-parser");
                 var now = coordinates[i];
                 var next = coordinates[i + 1];
                 var THRESHOLD = 0.9;
-                if ((prev && now && Math.abs(cos_theta(prev, now)) > THRESHOLD)
-                    || (next && now && Math.abs(cos_theta(next, now)) > THRESHOLD)) {
+                if ((prev && Math.abs(cos_theta(prev, now)) > THRESHOLD)
+                    || (next && Math.abs(cos_theta(next, now)) > THRESHOLD)) {
                     // ／ direction
                     ans.push("        <path d=\"m " + now.x.toPrecision(4) + " " + now.y.toPrecision(4) + " " + SLAB_LENGTH / 2 + " " + -SLAB_LENGTH / 2 + " " + -SLAB_LENGTH + " " + SLAB_LENGTH + " z\" />");
                 }

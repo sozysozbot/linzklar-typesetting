@@ -40,7 +40,7 @@ import { Command, makeAbsolute, parseSVG } from 'svg-path-parser';
         // generate slab serif
         const SLAB_LENGTH = 0.4;
         const SHEAR_ANGLE = -10 * Math.PI / 180;
-        fs.writeFileSync(`sheared_slab_serif/${charname}.svg`, `<?xml version="1.0" encoding="UTF-8"?>
+        fs.writeFileSync(`sheared_slab_serif_draft/${charname}.svg`, `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <g transform="matrix(1 ${Math.tan(SHEAR_ANGLE)} 0 1 0 0)">
         <path fill="#faa" d="m-4 -4 h8v8h-8" />
