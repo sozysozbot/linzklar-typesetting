@@ -39,7 +39,7 @@ import { Command, makeAbsolute, parseSVG } from 'svg-path-parser';
 
         // generate slab serif
         const SLAB_LENGTH = 0.4;
-        const SHEAR_ANGLE = -10 *  Math.PI / 180;
+        const SHEAR_ANGLE = -10 * Math.PI / 180;
         fs.writeFileSync(`sheared_slab_serif/${charname}.svg`, `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="32mm" height="32mm" version="1.1" viewBox="-4 -4 8 8" xmlns="http://www.w3.org/2000/svg">
     <g transform="matrix(1 ${Math.tan(SHEAR_ANGLE)} 0 1 0 0)">
@@ -60,10 +60,35 @@ ${new_paths.flatMap(d => {
 
             // If we store both x0 and y0, then that will be redundant.
             // Also, the first 'moveto' command has `x0:0, y0:0`.
-            // Hence we only need to store .x and .y
-            return commands_absolute.flatMap(c => [
-                `        <path d="m ${(c.x).toPrecision(4)} ${(Math.tan(SHEAR_ANGLE) * c.x + c.y).toPrecision(4)} ${SLAB_LENGTH / 2} ${SLAB_LENGTH / 2} ${-SLAB_LENGTH} ${-SLAB_LENGTH} z" />`
-            ]);
+            // Hence we only need to store `.x` and `.y`
+            // Also apply the shear transform here
+            const coordinates = commands_absolute.map(c => ({ x: c.x, y: Math.tan(SHEAR_ANGLE) * c.x + c.y }));
+
+            const cos_theta = (a: { x: number, y: number }, b: { x: number, y: number }) =>
+                ((a.x - b.x) * Math.SQRT1_2 + (a.y - b.y) * Math.SQRT1_2) / Math.hypot(a.x - b.x, a.y - b.y)
+                ;
+            // The slab defaults to the ＼ direction,
+            // but if the preceding or the following stroke is almost parallel to the stroke,
+            // the direction is avoided and the slab will be in the ／ direction.
+            const ans = [];
+            for (let i = 0; i < coordinates.length; i++) {
+                const prev: { x: number, y: number } | undefined = coordinates[i - 1];
+                const now: { x: number, y: number } = coordinates[i];
+                const next: { x: number, y: number } | undefined = coordinates[i + 1];
+
+                const THRESHOLD = 0.9;
+
+                if ((prev && Math.abs(cos_theta(prev, now)) > THRESHOLD)
+                    || (next && Math.abs(cos_theta(next, now)) > THRESHOLD)
+                ) {
+                    // ／ direction
+                    ans.push(`        <path d="m ${now.x.toPrecision(4)} ${now.y.toPrecision(4)} ${SLAB_LENGTH / 2} ${-SLAB_LENGTH / 2} ${-SLAB_LENGTH} ${SLAB_LENGTH} z" />`)
+                } else {
+                    // ＼ direction
+                    ans.push(`        <path d="m ${now.x.toPrecision(4)} ${now.y.toPrecision(4)} ${SLAB_LENGTH / 2} ${SLAB_LENGTH / 2} ${-SLAB_LENGTH} ${-SLAB_LENGTH} z" />`)
+                }
+            }
+            return ans;
         }).join("\n")}
     </g>
 </svg>`);
