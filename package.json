@@ -8,7 +8,7 @@
     "@types/jsdom": "^16.2.13",
     "@types/svg-path-parser": "^1.1.2",
     "excel-column-name": "^1.0.1",
-    "jsdom": "^17.0.0",
+    "jsdom": "^18.0.0",
     "svg-path-parser": "^1.1.0",
     "svgpath": "^2.3.1"
   },
