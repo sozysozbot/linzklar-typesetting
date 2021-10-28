@@ -16,14 +16,14 @@
 ここで出力された `sheared_slab_serif_draft` は下書きであって、人のぬくもりを元に手動訂正が必要である。訂正後のものが `sheared_slab_serif` に置かれるはずである。がんばれ。
 
 ## 手動訂正
-![](https://github.com/sozysozbot/linzklar-typesetting/blob/master/slab_serif.png)
+![](https://github.com/sozysozbot/linzklar-typesetting/blob/main/slab_serif.png)
 
 こんな感じに手動訂正を行う。
 
 ## 肉付け（未実装）
 このスラブセリフに肉付けをすることで、筆っぽいフォントを作る予定である。
 
-![](https://github.com/sozysozbot/linzklar-typesetting/blob/master/肉付け.png)
+![](https://github.com/sozysozbot/linzklar-typesetting/blob/main/肉付け.png)
 
 予定：
 * 元のストロークが直線である場合は、平行四辺形や三角形にすればよい。
