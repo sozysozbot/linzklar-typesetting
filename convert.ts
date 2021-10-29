@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as svgpath from 'svgpath';
 import * as jsdom from 'jsdom';
-import { Command, makeAbsolute, parseSVG } from 'svg-path-parser';
+import { Command, CommandMadeAbsolute, makeAbsolute, parseSVG } from 'svg-path-parser';
 
 (() => {
     const { JSDOM } = jsdom;
@@ -52,11 +52,10 @@ ${new_paths.map(d => `            <path d="${d}" />`).join("\n")}
     <g stroke="#ff7f27" stroke-width=".07" id="slabs">
 ${new_paths.flatMap(d => {
             const commands: Command[] = parseSVG(d);
-            makeAbsolute(commands);
-            // REASON: `makeAbsolute` modifies the Command[] in-place;
+            
+            // `makeAbsolute` modifies the Command[] in-place;
             // this method generates `.x0`, `.y0`, `.x` and `.y` for all the commands.
-            // Hence I will cast with `as any as`
-            const commands_absolute = commands as any as { x0: number, y0: number, x: number, y: number }[]
+            const commands_absolute: CommandMadeAbsolute[] = makeAbsolute(commands);
 
             // If we store both x0 and y0, then that will be redundant.
             // Also, the first 'moveto' command has `x0:0, y0:0`.
