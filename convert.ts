@@ -57,7 +57,7 @@ ${new_paths.flatMap(d => {
             // this method generates `.x0`, `.y0`, `.x` and `.y` for all the commands.
             const commands_absolute: CommandMadeAbsolute[] = makeAbsolute(commands);
 
-            // If we store both x0 and y0, then that will be redundant.
+            // If we store both (x0, y0) and (x, y), then that will be redundant.
             // Also, the first 'moveto' command has `x0:0, y0:0`.
             // Hence we only need to store `.x` and `.y`
             // Also apply the shear transform here
