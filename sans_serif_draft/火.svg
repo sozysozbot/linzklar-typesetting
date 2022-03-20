@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32mm"
+   height="32mm"
+   version="1.1"
+   viewBox="-4 -4 8 8"
+   id="svg1332"
+   sodipodi:docname="火.svg"
+   inkscape:version="1.2-dev (ff617d42, 2021-10-26)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1336" />
+  <sodipodi:namedview
+     id="namedview1334"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:blackoutopacity="0.0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="4.4725885"
+     inkscape:cx="-10.396664"
+     inkscape:cy="37.897517"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1332" />
+  <!-- From 躍R5 -->
+  <path
+     fill="#faa"
+     d="m-4 -4 h8v8h-8"
+     id="path1315" />
+  <path
+     fill="#aff"
+     d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383"
+     id="path1317" />
+  <path
+     d="m -0.80803441,-3.0906495 1.35637244,1.1881097"
+     id="path1319"
+     style="fill:none;stroke:#000000;stroke-width:0.365"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 2.6894108,-2.8497937 c 0,0 -2.13563264,3.21466717 -5.6435268,5.6577536"
+     id="path1321"
+     style="fill:none;stroke:#000000;stroke-width:0.365"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M -2.018189,-1.9857445 2.952882,2.8491498"
+     id="path1323"
+     style="fill:none;stroke:#000000;stroke-width:0.365"
+     sodipodi:nodetypes="cc" />
+</svg>
