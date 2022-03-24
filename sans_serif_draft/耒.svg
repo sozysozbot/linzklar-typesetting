@@ -7,10 +7,6 @@
    xml:space="preserve"
    style="fill-rule:evenodd;clip-rule:evenodd;"
    id="svg293"
-   sodipodi:docname="耒.svg"
-   inkscape:version="1.2-alpha1 (b6a15bbbed, 2022-02-23)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"><defs
    id="defs297">
@@ -29,25 +25,7 @@
             
         
             
-        </defs><sodipodi:namedview
-   id="namedview295"
-   pagecolor="#ffffff"
-   bordercolor="#999999"
-   borderopacity="1"
-   inkscape:pageshadow="0"
-   inkscape:pageopacity="0"
-   inkscape:pagecheckerboard="0"
-   inkscape:deskcolor="#d1d1d1"
-   showgrid="false"
-   inkscape:zoom="9.3186813"
-   inkscape:cx="45.553656"
-   inkscape:cy="45.5"
-   inkscape:window-width="1920"
-   inkscape:window-height="1025"
-   inkscape:window-x="-8"
-   inkscape:window-y="-8"
-   inkscape:window-maximized="1"
-   inkscape:current-layer="svg293" />
+        </defs>
     <path
    d="M0,0L90.709,0L90.709,90.709L0,90.709"
    style="fill:rgb(255,170,170);fill-rule:nonzero;"
