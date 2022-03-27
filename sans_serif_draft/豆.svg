@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32mm"
+   height="32mm"
+   version="1.1"
+   viewBox="-4 -4 8 8"
+   id="svg11289"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11293" />
+  <!-- From 処AA18:AB19 -->
+  <path
+     fill="#ffaaaa"
+     d="M -4,-4 H 4 V 4 H -4"
+     id="path11280" />
+  <path
+     fill="#aff"
+     d="m-3.376915 -3.376915 h6.75383 v6.75383 h-6.75383"
+     id="path11282" />
+  <path
+     d="M -2.1213167,-2.3541226 H 2.1213165"
+     id="path11284"
+     style="fill:none;stroke:#000000;stroke-width:0.365" />
+  <path
+     d="M -3.192,2.5042053 H 3.192"
+     id="path11286"
+     style="fill:none;stroke:#000000;stroke-width:0.365" />
+  <path
+     d="M -2.1213166,0.07504135 H 2.1213166"
+     id="path11838"
+     style="fill:none;stroke:#000000;stroke-width:0.365" />
+  <path
+     d="M 0,-2.3541226 V 2.5042053"
+     id="path25001"
+     style="fill:none;stroke:#000000;stroke-width:0.365" />
+  <path
+     d="m -1.8918681,-1.8407786 0.7989307,1.36101676"
+     id="path26784"
+     style="fill:none;stroke:#000000;stroke-width:0.365" />
+  <path
+     d="m 1.9476797,-1.9683298 c 0,0 -0.3907376,0.98072546 -1.09038379,1.54579233"
+     id="path26786"
+     style="fill:none;stroke:#000000;stroke-width:0.365" />
+  <path
+     d="m -1.8918681,0.6781997 0.7989307,1.3610168"
+     id="path29930"
+     style="fill:none;stroke:#000000;stroke-width:0.365" />
+  <path
+     d="m 1.9476797,0.55064832 c 0,0 -0.3907376,0.98072568 -1.09038379,1.54579258"
+     id="path29932"
+     style="fill:none;stroke:#000000;stroke-width:0.365" />
+</svg>
