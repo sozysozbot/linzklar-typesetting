@@ -23,7 +23,7 @@
 ## 肉付け（未実装）
 このスラブセリフに肉付けをすることで、筆っぽいフォントを作る予定である。
 
-![](https://github.com/sozysozbot/linzklar-typesetting/blob/main/肉付け.svg)
+![](https://github.com/sozysozbot/linzklar-typesetting/blob/main/nikuduke.svg)
 
 予定：
 * 元のストロークが直線である場合は、平行四辺形や三角形にすればよい。
