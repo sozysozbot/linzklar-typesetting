@@ -13,7 +13,7 @@
     "svgpath": "^2.3.1"
   },
   "devDependencies": {
-    "css-loader": "6.11.0",
+    "css-loader": "7.1.1",
     "mini-css-extract-plugin": "2.9.0",
     "node-sass": "9.0.0",
     "sass-loader": "13.3.3",
