@@ -16,7 +16,7 @@
     "css-loader": "6.11.0",
     "mini-css-extract-plugin": "2.8.1",
     "node-sass": "9.0.0",
-    "sass-loader": "13.3.2",
+    "sass-loader": "13.3.3",
     "ts-loader": "9.4.4",
     "typescript": "5.4.5",
     "webpack": "5.89.0",
